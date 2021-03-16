@@ -2,7 +2,7 @@
   "name": "react-mobile-modals",
   "version": "1.0.0",
   "description": "Made with create-react-library",
-  "author": "",
+  "author": "skilldill",
   "license": "MIT",
   "repository": "https://github.com/skilldill/react-mobile-modals",
   "main": "dist/index.js",
@@ -59,9 +59,5 @@
   },
   "files": [
     "dist"
-  ],
-  "dependencies": {
-    "@types/classnames": "^2.2.11",
-    "classnames": "^2.2.6"
-  }
+  ]
 }
