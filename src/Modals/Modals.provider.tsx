@@ -14,7 +14,7 @@ export const ModalsProvider: FC = ({ children }) => {
     ModalsContextModeNames.open
   );
 
-  const addModal = (modal: ModalProps) => {
+  const openModal = (modal: ModalProps) => {
     setMode(ModalsContextModeNames.open);
     setModals([...modals, modal]);
   };
@@ -59,7 +59,7 @@ export const ModalsProvider: FC = ({ children }) => {
 
   const values = {
     modals,
-    addModal,
+    openModal,
     closeModal,
   };
 

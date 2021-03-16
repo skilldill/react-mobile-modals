@@ -19,9 +19,9 @@ const ThridModal = () => {
 
 
 const SecondModal = () => {
-  const { addModal } = useModals();
+  const { openModal } = useModals();
 
-  const openThridModal = () => addModal({ component: <ThridModal /> });
+  const openThridModal = () => openModal({ component: <ThridModal /> });
 
   return (
     <div className="page page-red">
@@ -35,9 +35,9 @@ const SecondModal = () => {
 
 
 const FirstModal = () => {
-  const { addModal } = useModals();
+  const { openModal } = useModals();
 
-  const openSecondModal = () => addModal({ component: <SecondModal /> });
+  const openSecondModal = () => openModal({ component: <SecondModal /> });
 
   return (
     <div className="page page-green">
@@ -50,9 +50,9 @@ const FirstModal = () => {
 
 
 const MainWindow = () => {
-  const { addModal } = useModals();
+  const { openModal } = useModals();
 
-  const openFirstModal = () => addModal({ component: <FirstModal /> });
+  const openFirstModal = () => openModal({ component: <FirstModal /> });
 
   return (
     <div className="page main">

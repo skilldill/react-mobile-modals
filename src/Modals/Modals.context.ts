@@ -13,12 +13,12 @@ export interface ModalProps {
 
 export interface ModalContextModel {
     modals: ModalProps[],
-    addModal: (modal: ModalProps) => void,
+    openModal: (modal: ModalProps) => void,
     closeModal: () => void
 }
 
 export const ModalsContext = createContext<ModalContextModel>({
     modals: [],
-    addModal: () => {},
+    openModal: () => {},
     closeModal: () => {}
 })
