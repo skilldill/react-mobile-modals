@@ -9,7 +9,7 @@ enum ModalsContextModeNames {
 }
 
 export const ModalsProvider: FC = ({ children }) => {
-  const [modals, setModals] = useState<any>([]);
+  const [modals, setModals] = useState<ModalProps[]>([]);
   const [mode, setMode] = useState<ModalsContextModeNames>(
     ModalsContextModeNames.open
   );
@@ -22,8 +22,8 @@ export const ModalsProvider: FC = ({ children }) => {
   const closeModal = () => {
     const lastModal = modals[modals.length - 1];
     const openedModals = modals.filter(
-      (modal: ModalProps, i: number) => {
-        console.log(modal);
+      (modal, i) => {
+        modal // TODO: for linter)
         return i !== modals.length - 1
       }
     );
