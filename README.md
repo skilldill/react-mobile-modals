@@ -4,12 +4,18 @@
 
 [![NPM](https://img.shields.io/npm/v/react-mobile-modals.svg)](https://www.npmjs.com/package/react-mobile-modals) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
+![alt text](https://github.com/skilldill/react-mobile-modals/blob/master/example.gif?raw=true)
+
 ## Install
 
 ```bash
 npm install --save react-mobile-modals
 ```
+or
 
+```bash
+yarn add react-mobile-modals
+```
 ## Usage
 
 ```tsx
@@ -55,7 +61,7 @@ const App = () => {
   }
 }
 ```
-### Example (https://skilldill.github.io/react-mobile-modals/)
+### Example https://skilldill.github.io/react-mobile-modals/
 ## License
 
 MIT © [](https://github.com/)
