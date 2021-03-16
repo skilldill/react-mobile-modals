@@ -1,9 +1,19 @@
-/* add css module styles here (optional) */
+@keyframes showModal {
+  0% {
+      transform: translate(calc(100% - 0px));
+  }
 
-.test {
-  margin: 2em;
-  padding: 0.5em;
-  border: 2px solid #000;
-  font-size: 2em;
-  text-align: center;
+  100% {
+      transform: translate(0px);
+  }
+}
+
+.modal {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: white;
+}
+
+.modal-show {
+  animation: showModal .3s ease-out;
 }
