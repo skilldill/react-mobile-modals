@@ -55,7 +55,7 @@ const App = () => {
   }
 }
 ```
-
+### Example (https://skilldill.github.io/react-mobile-modals/)
 ## License
 
 MIT © [](https://github.com/)
