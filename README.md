@@ -4,8 +4,9 @@
 
 [![NPM](https://img.shields.io/npm/v/react-mobile-modals.svg)](https://www.npmjs.com/package/react-mobile-modals) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
-![example](https://github.com/skilldill/react-mobile-modals/blob/master/blob/example.gif?raw=true){:width="375px"}
+![example](https://github.com/skilldill/react-mobile-modals/blob/master/blob/example.gif?raw=true)
 
+#### Use with webview for creation pretty navigation 📱
 ## Install
 
 ```bash
@@ -19,7 +20,7 @@ yarn add react-mobile-modals
 ## Usage
 
 ```tsx
-import React, { Component } from 'react'
+import React from 'react'
 
 import { ModalsProvider, useModals } from 'react-mobile-modals'
 import 'react-mobile-modals/dist/index.css'
