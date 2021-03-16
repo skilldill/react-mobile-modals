@@ -40,8 +40,6 @@ export const useTouch = (config?: useTouchConfig) => {
   }, [])
 
   const handleTouchStart = useCallback((cb?: () => void) => (event: TouchEvent) => {
-    event.preventDefault();
-    
     const { touches } = event;
     const { clientX, clientY } = touches[0];
 
@@ -52,8 +50,6 @@ export const useTouch = (config?: useTouchConfig) => {
   }, [setStateStartX, setStateStartY])
 
   const handleTouchMove = useCallback((cb?: () => void) => (event: TouchEvent) => {
-    event.preventDefault();
-
     const { touches } = event;
     const { clientX, clientY } = touches[0];
 
