@@ -1,4 +1,4 @@
-# react-mobile-modals
+# React obile modals
 
 > Made with create-react-library
 
@@ -34,11 +34,11 @@ const Page = () => {
 const MainWindow = () => {
   const { openModal } = useModals();
 
-  const openFirstModal = () => openModal({ component: <Page /> });
+  const openPage = () => openModal({ component: <Page /> });
 
   return (
     <div className="page main">
-      <button onClick={openFirstModal}>
+      <button onClick={openPage}>
         Open first modal
       </button>
     </div>

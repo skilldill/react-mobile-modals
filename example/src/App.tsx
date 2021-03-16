@@ -1,6 +1,5 @@
-import React from 'react'
-
-import { ModalsProvider, useModals } from 'react-mobile-modals'
+import React from 'react';
+import { ModalsProvider, useModals } from 'react-mobile-modals';
 import "react-mobile-modals/dist/index.css";
 
 import "./index.css";
@@ -17,7 +16,6 @@ const ThridModal = () => {
   )
 }
 
-
 const SecondModal = () => {
   const { openModal } = useModals();
 
@@ -31,8 +29,6 @@ const SecondModal = () => {
     </div>  
   )
 }
-
-
 
 const FirstModal = () => {
   const { openModal } = useModals();
@@ -48,7 +44,6 @@ const FirstModal = () => {
   )
 }
 
-
 const MainWindow = () => {
   const { openModal } = useModals();
 
@@ -62,8 +57,6 @@ const MainWindow = () => {
     </div>
   )
 }
-
-
 
 const App = () => {
   return (
