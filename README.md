@@ -4,7 +4,7 @@
 
 [![NPM](https://img.shields.io/npm/v/react-mobile-modals.svg)](https://www.npmjs.com/package/react-mobile-modals) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
-![alt text](https://github.com/skilldill/react-mobile-modals/blob/master/example.gif?raw=true)
+![alt text](https://github.com/skilldill/react-mobile-modals/blob/master/blob/example.gif?raw=true)
 
 ## Install
 
