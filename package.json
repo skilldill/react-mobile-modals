@@ -62,10 +62,10 @@
   ],
   "keywords": [
     "react-modal",
+    "react-mobile",
+    "mobile-routing",
     "modal",
     "routing",
-    "mobile",
-    "mobile-routing",
-    "react-mobile"
+    "mobile"
   ]
 }
