@@ -47,7 +47,7 @@ const FirstModal = () => {
 const MainWindow = () => {
   const { openModal } = useModals();
 
-  const openFirstModal = () => openModal({ component: <FirstModal /> });
+  const openFirstModal = () => openModal({ component: <FirstModal />, openDirection: 'vertical' });
 
   return (
     <div className="page main">

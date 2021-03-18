@@ -1,10 +1,20 @@
-@keyframes showModal {
+@keyframes showModalHorizontal {
   0% {
-      transform: translate(calc(100% - 0px));
+      transform: translateX(calc(100% - 0px));
   }
 
   100% {
-      transform: translate(0px);
+      transform: translateX(0px);
+  }
+}
+
+@keyframes showModalVertical {
+  0% {
+    transform: translateY(calc(100% - 0px));
+}
+
+  100% {
+      transform: translateY(0px);
   }
 }
 
@@ -14,6 +24,10 @@
   background: white;
 }
 
-.modal-show {
-  animation: showModal .3s ease-out;
+.modal-show-vertical {
+  animation: showModalVertical .3s ease-out;
+}
+
+.modal-show-horizontal {
+  animation: showModalHorizontal .3s ease-out;
 }

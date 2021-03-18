@@ -46,10 +46,11 @@ export const ModalsProvider: FC = ({ children }) => {
               show={i === modals.length - 1 &&
                 mode === ModalsContextModeNames.open &&
                 !modal.closed}
+              direction={modal.openDirection}
               close={!!modal.closed}
               index={i}
-              key={i}
               onClose={closeModal}
+              key={i}
             >{modal.component}</Modal>
           ))}
       </React.Fragment>
