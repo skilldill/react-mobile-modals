@@ -12,7 +12,7 @@ interface ModalProps {
     onClose: () => void
 }
 
-const MIN_END_TOUCH = 40;
+const MIN_END_TOUCH = 60;
 
 const MAX_TOUCH_LENGTH = 80;
 
@@ -51,7 +51,7 @@ export const Modal: FC<ModalProps> = (props) => {
         
         // stateTranslateX - stateStartX > 0 чтобы не тянуть в обратную сторону
         const transformStyle = direction === 'vertical' ? 
-            { transform: stateStartY < 100 && stateTranslateY - stateStartY > 0 ? `translateY(${stateTranslateY}px)` : 'none' } : 
+            { transform: stateStartY < MIN_END_TOUCH && stateTranslateY - stateStartY > 0 ? `translateY(${stateTranslateY}px)` : 'none' } : 
             { transform: stateStartX < MIN_END_TOUCH && stateTranslateX - stateStartX > 0 ? `translateX(${stateTranslateX}px)` : 'none' };
 
         return {
