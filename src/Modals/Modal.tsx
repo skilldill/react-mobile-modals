@@ -59,7 +59,7 @@ export const Modal: FC<ModalProps> = (props) => {
             transition: animated ? 'all .2s' : 'none',
             ...transformStyle
         }
-    }, [direction, handleClosing, close, stateStartX, stateTranslateX, index])
+    }, [direction, handleClosing, close, stateStartX, stateTranslateX, stateTranslateY, stateStartY, index])
 
     const handleTouchEndVertical = () => {
         const touchMoveLength = stateTranslateY - stateStartY;
