@@ -47,7 +47,7 @@ const MainWindow = () => {
   return (
     <div className="page main">
       <button onClick={openPage}>
-        Open first modal
+        Open modal
       </button>
     </div>
   )

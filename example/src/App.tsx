@@ -33,7 +33,7 @@ const SecondModal = () => {
 const FirstModal = () => {
   const { openModal } = useModals();
 
-  const openSecondModal = () => openModal({ component: <SecondModal /> });
+  const openSecondModal = () => openModal({ component: <SecondModal />, openDirection: 'vertical' });
 
   return (
     <div className="page page-green">
@@ -47,7 +47,7 @@ const FirstModal = () => {
 const MainWindow = () => {
   const { openModal } = useModals();
 
-  const openFirstModal = () => openModal({ component: <FirstModal />, openDirection: 'vertical' });
+  const openFirstModal = () => openModal({ component: <FirstModal /> });
 
   return (
     <div className="page main">

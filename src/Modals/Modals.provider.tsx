@@ -1,5 +1,6 @@
 import React, { FC, useMemo, useState } from "react";
 
+import modalClasses from "../styles.module.css";
 import { ModalsContext, ModalProps } from "./Modals.context";
 import { Modal } from "./Modal";
 
@@ -66,7 +67,7 @@ export const ModalsProvider: FC = ({ children }) => {
 
   return (
     <ModalsContext.Provider value={values}>
-      <div className="modals">
+      <div className={modalClasses['modals']}>
         {children}
         {openedModals}
       </div>
