@@ -6,7 +6,7 @@
 
 ### Use with webview for creation pretty navigation 📱
 
-![example](https://github.com/skilldill/react-mobile-modals/blob/master/blob/example.gif?raw=true)
+![example](https://github.com/skilldill/react-mobile-modals/blob/master/blob/example-direction.gif?raw=true)
 
 ## Install
 
@@ -62,6 +62,12 @@ const App = () => {
     )
   }
 }
+
+### openModal(modalProps)
+#### modalProps
+* ``component``: ReactNode;
+* ``direction``: "horizontal", "vertical";
+
 ```
 ### Example https://skilldill.github.io/react-mobile-modals/
 ## License
