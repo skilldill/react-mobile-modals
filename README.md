@@ -26,7 +26,7 @@ import React from 'react'
 import { ModalsProvider, useModals } from 'react-mobile-modals'
 import 'react-mobile-modals/dist/index.css'
 
-const Page = () => {
+const SecondPage = () => {
   const { closeModal } = useModals();
 
   return (
@@ -38,16 +38,30 @@ const Page = () => {
   )
 }
 
+const FirstPage = () => {
+  const { openModal } = useModals();
+
+  const openSecondPage = () => openModal({ component: <SecondPage />, direction: "vertical" });
+
+  return (
+    <div className="page">
+      <button onClick={openSecondPage}>
+        Open second page
+      </button>
+    </div>  
+  )
+}
+
 
 const MainWindow = () => {
   const { openModal } = useModals();
 
-  const openPage = () => openModal({ component: <Page /> });
+  const openFirstPage = () => openModal({ component: <FirstPage /> });
 
   return (
     <div className="page main">
-      <button onClick={openPage}>
-        Open modal
+      <button onClick={openFirstPage}>
+        Open first page
       </button>
     </div>
   )
@@ -66,7 +80,7 @@ const App = () => {
 ### openModal(modalProps)
 #### modalProps
 * ``component``: ReactNode;
-* ``direction``: "horizontal", "vertical";
+* ``direction``: horizontal(default), vertical;
 
 
 ### Example https://skilldill.github.io/react-mobile-modals/
