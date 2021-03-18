@@ -62,13 +62,13 @@ const App = () => {
     )
   }
 }
-
+```
 ### openModal(modalProps)
 #### modalProps
 * ``component``: ReactNode;
 * ``direction``: "horizontal", "vertical";
 
-```
+
 ### Example https://skilldill.github.io/react-mobile-modals/
 ## License
 
