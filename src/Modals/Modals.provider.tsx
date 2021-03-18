@@ -1,5 +1,6 @@
 import React, { FC, useMemo, useState } from "react";
 
+import modalClasses from "../styles.module.css";
 import { ModalsContext, ModalProps } from "./Modals.context";
 import { Modal } from "./Modal";
 
@@ -46,10 +47,11 @@ export const ModalsProvider: FC = ({ children }) => {
               show={i === modals.length - 1 &&
                 mode === ModalsContextModeNames.open &&
                 !modal.closed}
+              direction={modal.openDirection}
               close={!!modal.closed}
               index={i}
-              key={i}
               onClose={closeModal}
+              key={i}
             >{modal.component}</Modal>
           ))}
       </React.Fragment>
@@ -65,7 +67,7 @@ export const ModalsProvider: FC = ({ children }) => {
 
   return (
     <ModalsContext.Provider value={values}>
-      <div className="modals">
+      <div className={modalClasses['modals']}>
         {children}
         {openedModals}
       </div>

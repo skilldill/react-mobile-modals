@@ -1,13 +1,10 @@
 import { createContext, ReactNode } from "react";
 
-export enum ModalDirectionNames {
-    horizontal = "horizontal", 
-    vertical = "vertical"
-}
+export type ModalDirectionTypes = "horizontal" | "vertical"
 
 export interface ModalProps {
     component: ReactNode,
-    openDirection?: ModalDirectionNames,
+    openDirection?: ModalDirectionTypes,
     closed?: boolean
 }
 
