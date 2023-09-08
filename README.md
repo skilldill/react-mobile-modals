@@ -13,11 +13,13 @@
 ```bash
 npm install --save react-mobile-modals
 ```
+
 or
 
 ```bash
 yarn add react-mobile-modals
 ```
+
 ## Usage
 
 ```tsx
@@ -34,7 +36,7 @@ const SecondPage = () => {
       <button onClick={closeModal}>
         Back
       </button>
-    </div>  
+    </div>
   )
 }
 
@@ -48,7 +50,7 @@ const FirstPage = () => {
       <button onClick={openSecondPage}>
         Open second page
       </button>
-    </div>  
+    </div>
   )
 }
 
@@ -77,13 +79,16 @@ const App = () => {
   }
 }
 ```
-### openModal(modalProps)
-#### modalProps
-* ``component``: ReactNode;
-* ``direction``: horizontal(default), vertical;
 
+### openModal(modalProps)
+
+#### modalProps
+
+- `component`: ReactNode;
+- `direction`: horizontal(default), vertical;
 
 ### Example https://skilldill.github.io/react-mobile-modals/
+
 ## License
 
 MIT © [](https://github.com/)

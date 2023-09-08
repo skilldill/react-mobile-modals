@@ -4,21 +4,21 @@ body {
 
 @keyframes showModalHorizontal {
   0% {
-      transform: translateX(calc(100% - 0px));
+    transform: translateX(calc(100% - 0px));
   }
 
   100% {
-      transform: translateX(0px);
+    transform: translateX(0px);
   }
 }
 
 @keyframes showModalVertical {
   0% {
     transform: translateY(calc(100% - 0px));
-}
+  }
 
   100% {
-      transform: translateY(0px);
+    transform: translateY(0px);
   }
 }
 
@@ -31,14 +31,17 @@ body {
 
 .modal {
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background: white;
 }
 
 .modal-show-vertical {
-  animation: showModalVertical .3s ease-out;
+  animation: showModalVertical 0.3s ease-out;
 }
 
 .modal-show-horizontal {
-  animation: showModalHorizontal .3s ease-out;
+  animation: showModalHorizontal 0.3s ease-out;
 }

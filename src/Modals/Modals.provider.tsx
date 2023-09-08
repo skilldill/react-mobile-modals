@@ -1,18 +1,18 @@
-import React, { FC, useMemo, useState } from "react";
+import React, { FC, PropsWithChildren, useMemo, useState } from 'react';
 
-import modalClasses from "../styles.module.css";
-import { ModalsContext, ModalProps } from "./Modals.context";
-import { Modal } from "./Modal";
+import modalClasses from '../styles.module.css';
+import { ModalsContext, ModalProps } from './Modals.context';
+import { Modal } from './Modal';
 
 enum ModalsContextModeNames {
   close,
   open,
 }
 
-export const ModalsProvider: FC = ({ children }) => {
+export const ModalsProvider: FC<PropsWithChildren> = ({ children }) => {
   const [modals, setModals] = useState<ModalProps[]>([]);
   const [mode, setMode] = useState<ModalsContextModeNames>(
-    ModalsContextModeNames.open
+    ModalsContextModeNames.open,
   );
 
   const openModal = (modal: ModalProps) => {
@@ -22,12 +22,10 @@ export const ModalsProvider: FC = ({ children }) => {
 
   const closeModal = () => {
     const lastModal = modals[modals.length - 1];
-    const openedModals = modals.filter(
-      (modal, i) => {
-        modal // TODO: for linter)
-        return i !== modals.length - 1
-      }
-    );
+    const openedModals = modals.filter((modal, i) => {
+      modal; // TODO: for linter)
+      return i !== modals.length - 1;
+    });
 
     setModals([...openedModals, { ...lastModal, closed: true }]);
 
@@ -43,20 +41,24 @@ export const ModalsProvider: FC = ({ children }) => {
       <React.Fragment>
         {!!modals.length &&
           (modals as ModalProps[]).map((modal, i) => (
-            <Modal 
-              show={i === modals.length - 1 &&
+            <Modal
+              show={
+                i === modals.length - 1 &&
                 mode === ModalsContextModeNames.open &&
-                !modal.closed}
+                !modal.closed
+              }
               direction={modal.openDirection}
               close={!!modal.closed}
               index={i}
               onClose={closeModal}
               key={i}
-            >{modal.component}</Modal>
+            >
+              {modal.component}
+            </Modal>
           ))}
       </React.Fragment>
     ),
-    [modals, mode]
+    [modals, mode],
   );
 
   const values = {
