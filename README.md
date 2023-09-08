@@ -41,9 +41,7 @@ const App = () => {
 ## Example
 ```tsx
 import React from 'react'
-
 import { ModalsProvider, useModals } from 'react-mobile-modals'
-import 'react-mobile-modals/dist/index.css'
 
 const SecondPage = () => {
   const { closeModal } = useModals();
