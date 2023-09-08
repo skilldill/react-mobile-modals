@@ -6,7 +6,7 @@
 
 ### Use with webview for creation pretty navigation 📱
 
-![example](./blob/example.mov)
+![example](./blob/example.gif?raw=true)
 
 ## Install
 
