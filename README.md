@@ -6,7 +6,7 @@
 
 ### Use with webview for creation pretty navigation 📱
 
-![example](./blob/example.gif?raw=true)
+![example](https://github.com/skilldill/react-mobile-modals/blob/master/blob/example.gif?raw=true)
 
 ## Install
 
