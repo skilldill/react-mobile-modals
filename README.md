@@ -105,7 +105,7 @@ const App = () => {
 | -------- | ------- | ------- | ------- |
 | **Prop**    | **Values** | **Default Values** | **Required** |
 | component | `ReactNode` | *none* | true |
-| direction  | `horizontal`, `vertical` | `horizontal` | true |
+| direction  | `horizontal`, `vertical` | `horizontal` | false |
 
 ### Example https://skilldill.github.io/react-mobile-modals/
 
