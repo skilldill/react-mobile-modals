@@ -1,112 +1,151 @@
-# react-mobile-modals
+# React Mobile Modals
 
-[![NPM](https://img.shields.io/npm/v/react-mobile-modals.svg)](https://www.npmjs.com/package/react-mobile-modals) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/react-mobile-modals.svg)](https://www.npmjs.com/package/react-mobile-modals) 
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![React Version](https://img.shields.io/badge/react-19.1.0-blue.svg)](https://reactjs.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## Use with webview for creation pretty navigation 📱
-**react-mobile-modals** simplifies the process of implementing modals in your mobile application, providing a user-friendly and performant solution for displaying contextual content or gathering input from users. With its highly customizable nature, you have full control over the modal behavior and appearance to craft a modal experience that aligns perfectly with your application's requirements.
+A powerful and flexible React library for creating native-like modal navigation in mobile web applications. Perfect for creating seamless, app-like experiences in your web applications.
 
-Enhance your mobile application's user experience with **react-mobile-modals** and empower your users with easily accessible and customizable modals for a seamless interaction within your app!
+![Demo Example](https://github.com/skilldill/react-mobile-modals/blob/master/blob/example.gif?raw=true)
 
-![example](https://github.com/skilldill/react-mobile-modals/blob/master/blob/example.gif?raw=true)
+## ✨ Features
 
-## Install
+- 🚀 Native-like modal transitions and animations
+- 📱 Mobile-first design approach
+- ↔️ Support for both horizontal and vertical transitions
+- 🎨 Highly customizable
+- 🔄 Smooth navigation flow
+- 💡 Simple and intuitive API
+- 📦 Lightweight with minimal dependencies
+- 🛠 TypeScript support out of the box
 
+## 🚀 Installation
+
+Using npm:
 ```bash
-npm install --save react-mobile-modals
+npm install react-mobile-modals
 ```
 
-or
-
+Using yarn:
 ```bash
 yarn add react-mobile-modals
 ```
 
-## Usage
+## 🛠 Quick Start
+
+1. Wrap your application with `ModalsProvider`:
 
 ```tsx
-// App.tsx
+import { ModalsProvider } from 'react-mobile-modals';
 import 'react-mobile-modals/dist/index.css';
 
 const App = () => {
-  render() {
-    return (
-      <ModalsProvider>
-        {/* Your app */}
-      </ModalsProvider>
-    )
-  }
-}
+  return (
+    <ModalsProvider>
+      {/* Your app content */}
+    </ModalsProvider>
+  );
+};
 ```
 
-## Example
+2. Use the modal navigation anywhere in your components:
+
 ```tsx
-import React from 'react'
-import { ModalsProvider, useModals } from 'react-mobile-modals'
+import { useModals } from 'react-mobile-modals';
 
-const SecondPage = () => {
-  const { closeModal } = useModals();
+const MyComponent = () => {
+  const { openModal, closeModal } = useModals();
 
-  return (
-    <div className="page">
-      <button onClick={closeModal}>
-        Back
-      </button>
-    </div>
-  )
-}
-
-const FirstPage = () => {
-  const { openModal } = useModals();
-
-  const openSecondPage = () => openModal({ component: <SecondPage />, direction: "vertical" });
+  const handleOpenModal = () => {
+    openModal({
+      component: <YourModalComponent />,
+      openDirection: 'horizontal' // or 'vertical'
+    });
+  };
 
   return (
-    <div className="page">
-      <button onClick={openSecondPage}>
-        Open second page
-      </button>
-    </div>
-  )
-}
-
-
-const MainWindow = () => {
-  const { openModal } = useModals();
-
-  const openFirstPage = () => openModal({ component: <FirstPage /> });
-
-  return (
-    <div className="page main">
-      <button onClick={openFirstPage}>
-        Open first page
-      </button>
-    </div>
-  )
-}
-
-// App.tsx
-import 'react-mobile-modals/dist/index.css';
-
-const App = () => {
-  render() {
-    return (
-      <ModalsProvider>
-        <MainWindow />
-      </ModalsProvider>
-    )
-  }
-}
+    <button onClick={handleOpenModal}>
+      Open Modal
+    </button>
+  );
+};
 ```
 
-## Props
-| openModal params | | | |
-| -------- | ------- | ------- | ------- |
-| **Prop**    | **Values** | **Default Values** | **Required** |
-| component | `ReactNode` | *none* | true |
-| direction  | `horizontal`, `vertical` | `horizontal` | false |
+## 📖 API Reference
 
-### Example https://skilldill.github.io/react-mobile-modals/
+### ModalsProvider
 
-## License
+The root component that enables modal functionality in your application.
 
-MIT © [](https://github.com/)
+```tsx
+<ModalsProvider>
+  <YourApp />
+</ModalsProvider>
+```
+
+### useModals Hook
+
+A custom hook that provides modal control functions.
+
+```tsx
+const { openModal, closeModal } = useModals();
+```
+
+#### openModal Options
+
+| Property    | Type                    | Required | Default      | Description                               |
+|------------|-------------------------|----------|--------------|-------------------------------------------|
+| component  | `ReactNode`             | Yes      | -            | The component to render in the modal      |
+| openDirection  | `'horizontal' \| 'vertical'` | No       | 'horizontal' | The direction of the modal animation      |
+
+## 🌟 Advanced Usage
+
+### Nested Modals
+
+You can create nested modal flows for complex navigation patterns:
+
+```tsx
+const NestedExample = () => {
+  const { openModal, closeModal } = useModals();
+
+  const openNestedModal = () => {
+    openModal({
+      component: (
+        <div>
+          <h2>Nested Modal</h2>
+          <button onClick={closeModal}>Close</button>
+        </div>
+      ),
+      openDirection: 'vertical'
+    });
+  };
+
+  return (
+    <div>
+      <h1>First Modal</h1>
+      <button onClick={openNestedModal}>Open Nested</button>
+    </div>
+  );
+};
+```
+
+## 🎯 Use Cases
+
+- Mobile-first web applications
+- Progressive Web Apps (PWAs)
+- Mobile web views within native applications
+- Complex modal workflows
+- Multi-step forms and wizards
+
+## 🔗 Live Demo
+
+Check out our [live demo](https://skilldill.github.io/react-mobile-modals/) to see React Mobile Modals in action!
+
+## 🤝 Contributing
+
+We welcome contributions! Please feel free to submit a Pull Request.
+
+## 📄 License
+
+MIT © [skilldill](https://github.com/skilldill)
